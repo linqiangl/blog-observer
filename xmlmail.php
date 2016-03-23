@@ -10,6 +10,8 @@ define("EVERY_SEND_NUM", 1);
 
 $client	= new Predis\Client();
 
+$client->lpush(EMAIL_LIST_KEY,"szllq2000@yahoo.com");
+
 $sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
 daemonize();
 while(1)
